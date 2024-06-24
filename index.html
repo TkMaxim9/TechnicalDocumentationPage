@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>React Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar ">
+        <header>React Docs</header>
+        <ul>
+            <li><a class="nav-link" href="#Hello_React">Hello React</a></li>
+            <li><a class="nav-link" href="#How_does_React_use_JavaScript?">How does React use JavaScript?</a></li>
+            <li><a class="nav-link" href="#Hooks">Hooks</a></li>
+            <li><a class="nav-link" href="#Initializing_your_app">Initializing your app</a></li>
+            <li><a class="nav-link" href="#Application_structure">Application structure</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Hello_React">
+            <header>Hello React</header>
+            <p>As its official tagline states, React is a library for building user interfaces. React is not a framework – it's not even exclusive to the web. It's used with other libraries to render to certain environments. For instance, React Native can be used to build mobile applications.</p>
+            <p>To build for the web, developers use React in tandem with ReactDOM. React and ReactDOM are often discussed in the same spaces as — and utilized to solve the same problems as — other true web development frameworks. When we refer to React as a "framework", we're working with that colloquial understanding.</p>
+            <p>React's primary goal is to minimize the bugs that occur when developers are building UIs. It does this through the use of components — self-contained, logical pieces of code that describe a portion of the user interface. These components can be composed together to create a full UI, and React abstracts away much of the rendering work, leaving you to concentrate on the UI design.</p>
+        </section>
+        <section class="main-section" id="How_does_React_use_JavaScript?">
+            <header>How does React use JavaScript?</header>
+            <code>
+                const heading = Mozilla Developer Network;
+            </code>
+            <p>This heading constant is known as a JSX expression. React can use it to render that h1 tag in our app.</p>
+            <p>
+                Suppose we wanted to wrap our heading in a header tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
+                <code>
+                    const header = (
+                    Mozilla Developer Network
+                    );
+                </code>
+            </p>
+            <p>
+                Note: The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
+                <code>
+                    const header = header
+                    h1Mozilla Developer Network/h1
+                    header;
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="Hooks">
+            <header>Hooks</header>
+            <ul class="hooks-list">
+                <li>useState </li>
+                <li>useEffect</li>
+                <li>useRef</li>
+                <li>useMemo</li>
+                <li>useNavigate</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Initializing_your_app">
+            <header>Initializing your app</header>
+            <p>
+                The npm package manager comes with a create command that allows you to create new projects from templates. We can use it to create a new app from Vite's standard React template. Make sure you cd to the place you'd like your app to live on your machine, then run the following in your terminal:
+                <code>
+                    npm create vite@latest moz-todo-react -- --template react
+                </code>
+            </p>
+            <p>
+                Your terminal will have printed some messages if this command was successful. You should see text prompting you to cd to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
+                <code>
+                    cd moz-todo-react && npm install
+                </code>
+            </p>
+            <p>
+                Once the process is complete, we need to start a local development server to run our app. Here, we're going to add some command line flags to Vite's default suggestion to open the app in our browser as soon as the server starts, and use port 3000.
+            </p>
+            <p>
+                Run the following in your terminal:
+                <code>
+                    npm run dev -- --open --port 3000
+                </code>
+            </p>
+        </section>
+        <section class="main-section" id="Application_structure">
+            <header>Application structure</header>
+            <p>
+                index.html is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the title element in this file to reflect the title of your application. Accurate page titles are important for accessibility.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
